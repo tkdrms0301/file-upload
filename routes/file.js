@@ -24,7 +24,7 @@ router.post("/upload", upload.single("file"), (req, res) => {
 });
 
 router.get("/file-name", (req, res) => {
-  let path = req.query.path; /* query를 이용하여 react에서 path를 전달 */
+  let path = "./upload";
 
   /* readdir에서 path, option, error, items(path에 있는 폴더,파일)를 넘긴다 */
   fs.readdir(path, { withFileTypes: true }, function (error, items) {
